@@ -15,8 +15,8 @@ const TechBitLOGO = () => {
 
 const TechBitSearch = () => {
     return <div className="flex gap-2 ml-6">
-        <Input  />
-        <Button  size={"icon"}>
+        <Input />
+        <Button size={"icon"}>
             <SearchIcon />
         </Button>
     </div>
@@ -33,7 +33,7 @@ const HeaderRight = () => {
 }
 
 const TechBitHeader = () => {
-    return <header className="h-16 flex items-center px-6 border-b border-b-zinc-200 bg-white dark:bg-zinc-900 dark:border-zinc-900">
+    return <header className="h-16 fixed left-0 right-0 top-0 flex items-center px-6 border-b border-b-zinc-200 bg-white dark:bg-zinc-900 dark:border-zinc-900">
         <TechBitLOGO />
         <TechBitSearch />
         <div className="flex-1" />
