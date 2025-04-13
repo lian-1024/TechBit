@@ -50,9 +50,6 @@ const NavigationMenu = () => {
 }
 
 
-const ArticleList = () => {
-
-}
 
 const HomeContent = () => {
   return <div className="flex-1 flex-col p-8 dark:bg-zinc-900 rounded-lg">

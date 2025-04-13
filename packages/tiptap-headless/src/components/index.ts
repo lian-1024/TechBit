@@ -1,0 +1,1 @@
+export { default as EditorContent } from '@/components/editor-content'
