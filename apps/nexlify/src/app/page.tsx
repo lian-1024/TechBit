@@ -13,6 +13,7 @@ const Tiptap = () => {
       GlobalDragHandle,
     ],
     content: ` 
+    hello world
     `,
   })
   return <EditorContent editor={editor} />
