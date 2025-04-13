@@ -7,23 +7,21 @@ import { usePathname } from "next/navigation";
 import { useState } from "react";
 
 
+/** 侧边栏菜单项 */
 const menuItems = [
   {
-    label: "Home",
+    label: "综合",
     href: "/",
   },
   {
-    label: "About",
-    href: "/about"
+    label: "前端",
+    href: "/frontend",
   },
   {
-    label: "Blog",
-    href: "/blog"
-  },
-  {
-    label: "Contact",
-    href: "/contact"
+    label: "后端",
+    href: "/backend"
   }
+
 ]
 
 const NavigationMenu = () => {
@@ -51,12 +49,25 @@ const NavigationMenu = () => {
   </ul>
 }
 
+
+const ArticleList = () => {
+
+}
+
 const HomeContent = () => {
-  return <div className="flex-1">content</div>
+  return <div className="flex-1 flex-col p-8 dark:bg-zinc-900 rounded-lg">
+    <div className="rounded-lg">
+
+      <h2 className="scroll-m-20 border-b pb-2 text-3xl font-semibold tracking-tight first:mt-0">
+        The People of the Kingdom
+      </h2>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Temporibus repellendus vel sed praesentium dolorum perferendis dolore nesciunt provident ullam doloremque voluptates odit, quas atque tempore voluptatem non cupiditate error eligendi.</p>、
+    </div>
+  </div>
 }
 
 const Aside = () => {
-  return <div>aside</div>
+  return <div className="w-64">aside</div>
 }
 
 export default function Home() {
