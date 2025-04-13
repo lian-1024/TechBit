@@ -2,6 +2,7 @@ import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
 import path, { resolve } from 'path'
 import dts from 'vite-plugin-dts'
+import tailwindcss from '@tailwindcss/vite'
 
 export default defineConfig({
   plugins: [

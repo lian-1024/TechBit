@@ -1,7 +1,6 @@
 "use client";
-import { EditorContent } from '@lianqq/tiptap-headless'
-import {StarterKit} from '@lianqq/tiptap-headless'
-import GlobalDragHandler from 'tiptap-extension-global-drag-handle'
+import { EditorContent, StarterKit, GlobalDragHandle, SlashCommand, getSuggestionItems, renderItems, suggestionConfig } from '@lianqq/tiptap-headless'
+
 const initialContent = `
 <p>lian</p>
 <p>lian</p>
@@ -9,7 +8,10 @@ const initialContent = `
 
 const extensions = [
   StarterKit,
-  GlobalDragHandler
+  GlobalDragHandle,
+  SlashCommand.configure({
+    suggestion: suggestionConfig
+  })
 ]
 
 const Tiptap = () => {

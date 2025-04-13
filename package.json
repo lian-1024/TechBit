@@ -30,9 +30,11 @@
     "vite": "^6.2.0"
   },
   "dependencies": {
+    "@tiptap/core": "^2.11.7",
     "@tiptap/pm": "^2.11.7",
     "@tiptap/react": "^2.11.7",
     "@tiptap/starter-kit": "^2.11.7",
+    "@tiptap/suggestion": "^2.11.7",
     "class-variance-authority": "^0.7.1",
     "clsx": "^2.1.1",
     "lucide-react": "^0.487.0",
@@ -41,6 +43,7 @@
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
     "tailwind-merge": "^3.2.0",
+    "tippy.js": "^6.3.7",
     "tiptap-extension-global-drag-handle": "^0.1.18",
     "tw-animate-css": "^1.2.5",
     "vite-plugin-dts": "^4.5.3"

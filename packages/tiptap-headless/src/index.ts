@@ -2,5 +2,9 @@ export { EditorContent } from '@/components'
 
 export {
     GlobalDragHandle,
-    StarterKit
+    StarterKit,
+    SlashCommand,
+    suggestionConfig,
+    Suggestion
+
 } from '@/extensions'

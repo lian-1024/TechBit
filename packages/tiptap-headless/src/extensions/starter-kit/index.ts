@@ -1,0 +1,1 @@
+export { default as StarterKit } from './starter-kit'
