@@ -1,0 +1,12 @@
+{
+  "extends": "@lianqq/typescript-config/react-library.json",
+  "compilerOptions": {
+    "baseUrl": ".",
+    "paths": {
+      "@lianqq/ui/*": ["./src/*"]
+      
+    }
+  },
+  "include": ["."],
+  "exclude": ["node_modules", "dist"]
+}

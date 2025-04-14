@@ -2,7 +2,8 @@ import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
   /* config options here */
-  reactStrictMode: false
+  transpilePackages:['@lianqq/ui']
+
 };
 
 export default nextConfig;

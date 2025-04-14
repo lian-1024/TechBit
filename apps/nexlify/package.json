@@ -3,13 +3,15 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev",
+    "dev": "next dev -p 3006",
     "build": "next build",
     "start": "next start",
     "lint": "next lint"
   },
   "dependencies": {
     "@radix-ui/react-slot": "^1.2.0",
-    "@lianqq/tiptap-headless": "workspace:*"
+    "@lianqq/tiptap-headless": "workspace:*",
+    "@lianqq/ui": "workspace:*"
+
   }
 }

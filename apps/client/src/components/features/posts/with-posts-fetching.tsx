@@ -2,7 +2,7 @@ import { FC, ComponentProps } from "react";
 import PostsList from './posts-list'
 import { usePosts } from '@/hooks/use-posts'
 
-const withPostsFetcing = (WrappedComponent: typeof PostsList) => {
+const withPostsFetching = (WrappedComponent: typeof PostsList) => {
     return function WithPostsFetchingComponent() {
         const { posts, loadMore, refresh, isLoading } = usePosts({ initialPage: 10 })
         
@@ -15,4 +15,4 @@ const withPostsFetcing = (WrappedComponent: typeof PostsList) => {
     }
 }
 
-export default withPostsFetcing
+export default withPostsFetching

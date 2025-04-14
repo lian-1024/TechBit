@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
+import "@lianqq/ui/globals.css"
 import TechBitHeader from "@/components/layout/techbit-header";
 import TechBitFooter from "@/components/layout/techbit-footer";
 import TechBitMain from "@/components/layout/techbit-main";

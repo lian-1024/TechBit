@@ -1,13 +1,10 @@
 "use client"
 
-import { PostsCard, PostsList } from "@/components/features/posts";
-import { Button } from "@/components/ui/button";
-import Image from "next/image";
+import { PostsList } from "@/components/features/posts";
+import { Button } from "@lianqq/ui/components/button";
 import Link from "next/link";
-import { usePathname } from "next/navigation";
-import { useEffect, useState } from "react";
-import { usePosts } from "@/hooks/use-posts";
-import { withPostsFetcing } from "@/components/features/posts";
+import { useState } from "react";
+import { withPostsFetching } from "@/components/features/posts";
 
 
 /** 侧边栏菜单项 */
@@ -52,13 +49,13 @@ const Navigation = () => {
   </ul>
 }
 
-const WithPostsFetcingComponent = withPostsFetcing(PostsList)
+const WithPostsFetchingComponent = withPostsFetching(PostsList)
 
 
 const Content = () => {
 
   return <div className="flex-1 flex-col rounded-lg">
-    <WithPostsFetcingComponent />
+    <WithPostsFetchingComponent />
   </div>
 }
 

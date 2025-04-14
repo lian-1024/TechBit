@@ -1,8 +1,8 @@
 import { SearchIcon } from "lucide-react"
-import { Button } from "../ui/button"
-import { Input } from "../ui/input"
-import { Avatar, AvatarFallback, AvatarImage } from "../ui/avatar"
-import { Separator } from '@/components/ui/separator'
+import { Button } from "@lianqq/ui/components/button"
+import { Input } from "@lianqq/ui/components/input"
+import { Avatar, AvatarFallback, AvatarImage } from "@lianqq/ui/components/avatar"
+import { Separator } from '@lianqq/ui/components/separator'
 import { FC, PropsWithChildren } from "react"
 import { ModeToggle } from "../mode-toggle"
 
@@ -33,7 +33,7 @@ const HeaderRight = () => {
 }
 
 const TechBitHeader = () => {
-    return <header className="h-16 fixed left-0 right-0 top-0 flex items-center px-6 border-b border-b-zinc-200 bg-white dark:bg-zinc-900 dark:border-zinc-900">
+    return <header className="z-50 h-16 fixed left-0 right-0 top-0 flex items-center px-6 border-b border-b-zinc-200 bg-white dark:bg-zinc-900 dark:border-zinc-900">
         <TechBitLOGO />
         <TechBitSearch />
         <div className="flex-1" />
