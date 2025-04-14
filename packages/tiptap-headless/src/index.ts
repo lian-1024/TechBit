@@ -5,6 +5,6 @@ export {
     StarterKit,
     SlashCommand,
     suggestionConfig,
-    Suggestion
-
+    Suggestion,
+    SlashCommandSenconary
 } from '@/extensions'

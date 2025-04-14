@@ -2,6 +2,7 @@ import { Editor } from '@tiptap/core'
 import { forwardRef, useEffect, useImperativeHandle, useState } from 'react'
 import { createPortal } from 'react-dom'
 
+
 interface CommandItem {
   title: string
   command: (props: { editor: Editor; range: Range }) => void
@@ -98,6 +99,7 @@ const SlashCommandMenu = forwardRef<SlashCommandMenuRef, SlashCommandMenuProps>(
         }}
       >
         {filteredItems.map((item, index) => (
+
           <div
             key={item.title}
             className={`slash-command-item ${

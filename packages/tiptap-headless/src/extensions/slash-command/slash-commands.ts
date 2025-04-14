@@ -6,7 +6,7 @@ import { commands } from './commands';
 
 
 export const suggestionConfig: Pick<SuggestionOptions, 'items' | 'render'> = {
-   // 例如 用户输入 /Head   那么 query 就是 Head
+    // 例如 用户输入 /Head   那么 query 就是 Head
     items: ({ query }) => {
         // 然后根据 query 过滤 commands
         // 获取建议项
@@ -28,14 +28,27 @@ export const suggestionConfig: Pick<SuggestionOptions, 'items' | 'render'> = {
                     editor: props.editor, // 传入编辑器实例
                 });
 
-                popup = tippy('body', {
+                if (!props.clientRect) {
+                    return
+                }
+
+
+                popup = tippy(document.body, {
                     // 使用 tippy.js 创建弹出框 定义菜单位置
                     getReferenceClientRect: () => {
-                        if (typeof props.clientRect === 'function') {
-                            const rect = props.clientRect(); 
-                            return rect || new DOMRect(0, 0, 0, 0); // Fallback to default DOMRect if null
+                        const rect = props.clientRect?.()
+
+                        if(!rect) {
+                            return new DOMRect(0,0,0,0)
                         }
-                        return new DOMRect(0, 0, 0, 0); // Fallback if clientRect is not a function
+
+                        return {
+                            ...rect,
+                            top: rect.top + window.scrollY,
+                            left: rect.left + window.scrollX,
+                            width: rect.width,
+                            height: rect.height,
+                        }
                     },
                     appendTo: () => document.body,
                     content: component.element, // 渲染组件为弹出框
@@ -47,23 +60,30 @@ export const suggestionConfig: Pick<SuggestionOptions, 'items' | 'render'> = {
             },
 
             onUpdate(props) {
-                component.updateProps(props);
+                component.updateProps(props)
+
+                if (!props.clientRect) {
+                    return
+                }
+
                 popup[0].setProps({
-                    getReferenceClientRect: props.clientRect as () => DOMRect,
-                });
+                    getReferenceClientRect: props.clientRect,
+                })
             },
 
             onKeyDown(props) {
                 if (props.event.key === 'Escape') {
-                    popup[0].hide();
-                    return true;
+                    popup[0].hide()
+
+                    return true
                 }
-                return component.ref?.onKeyDown(props);
+
+                return component.ref?.onKeyDown(props)
             },
 
             onExit() {
-                popup[0].destroy();
-                component.destroy();
+                popup[0].destroy()
+                component.destroy()
             },
         };
     },

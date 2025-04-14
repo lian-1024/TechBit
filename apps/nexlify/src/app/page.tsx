@@ -1,5 +1,6 @@
 "use client";
-import { EditorContent, StarterKit, GlobalDragHandle, SlashCommand, getSuggestionItems, renderItems, suggestionConfig } from '@lianqq/tiptap-headless'
+import 'tippy.js/dist/tippy.css'
+import { EditorContent, StarterKit, GlobalDragHandle, SlashCommand, suggestionConfig,SlashCommandSenconary } from '@lianqq/tiptap-headless'
 
 const initialContent = `
 <p>lian</p>
