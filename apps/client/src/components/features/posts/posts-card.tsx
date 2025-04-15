@@ -20,7 +20,7 @@ const ArticleCard: FC<PostsCardProps> = ({ children, post, ...rest }) => {
                 {new Date().toLocaleDateString("zh-CN")}
             </code>
         </div>
-        <h2 className="scroll-m-20  text-3xl font-semibold tracking-tight mb-6 text-zinc-200 group-hover:text-white line-clamp-2">
+        <h2 className="scroll-m-20  text-3xl font-semibold tracking-tight mb-6 text-black  dark:text-zinc-200 dark:group-hover:text-white line-clamp-2">
             An AI collaboration document has been developed, which is based on React. This document is designed to facilitate collaborative efforts between different users and teams.
         </h2>
         {/* <p className="leading-7 [&:not(:first-child)]:mt-6">

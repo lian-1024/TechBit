@@ -38,7 +38,7 @@ const PostsList = <T,>({ children, posts, loading, onRefresh, onLoadMore, ...res
 
 
     return <div {...rest} >
-        {Array.from({ length: 6 }).map((post, index) => {
+        {posts?.map((post, index) => {
             return <PostsCard post={post} key={index} />
         })}
         {children}
